@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const food = require("./food");
+const food = require("./food.js");
 const address = require("./address.js");
 const category = require("./category.js");
 const comment = require("./comment.js");
@@ -11,10 +11,10 @@ const restaurantSchema = new mongoose.Schema({
     openingTime : Number,
     closingTime : Number,
     averageRate : Number,
-    address : address.Schema,
-    categories : [category.Schema],
+    address : address.schema,
+    categories : [category.schema],
     foods: [food.schema],
-    comments : [comment.Schema]
+    comments : [comment.schema]
 });
 
 module.exports = {
