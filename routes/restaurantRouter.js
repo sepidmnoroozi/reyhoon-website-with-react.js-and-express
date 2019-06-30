@@ -47,7 +47,18 @@ restaurantRouter
 
   })
   .post("/restaurants", (req, res) => {
-
-  })
+    let resObject = new restaurant.model();
+    resObject.id = req.body.id;
+    resObject.name = req.body.name;
+    resObject.openingTime = req.body.openingTime;
+    resObject.closingTime = req.body.closingTime;
+    resObject.address = req.body.address;
+    resObject.categories = req.body.categories;
+    resObject.save();
+    res.json({
+      message: "success"
+    });
+    
+  });
   
 module.exports = restaurantRouter;
