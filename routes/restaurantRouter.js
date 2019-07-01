@@ -29,16 +29,123 @@ restaurantRouter
   })
   //not ok!
   .get("/restaurants", (req, res) => {
-    // var area_query = req.query["‫‪area"];
-    // var categories_query = req.query["category"];
-    // console.log(area_query+"\n"+categories_query);
-    // var result = [];
-    restaurant.model.find({}, (error, foods) => {
-      if (error) {
-        res.send(error);
-      }
-      res.send(foods);
-    });
+    var q = req.query;
+    var q_a = q.area;
+    var q_c_l = q.category;
+    if (q_a != null && q_c_l!=null){
+      console.log("YES YES");
+      restaurant.model.find({'address.area':req.query.area}, (error, results) => {
+        if (error) {
+          res.send(error);
+        }
+        var res_final = [];
+        if(typeof q_c_l === 'string'){
+          console.log("1 done");
+          results.forEach(element1 => {
+            var cats = element1.categories;
+            cats.forEach(element2 => {
+              if (element2.id == q_c_l){
+                res_final.push(element1.name);
+              }
+            });
+          });
+        }
+        else{
+          console.log("list dadi dadash");
+          var flag = 0;
+          var i_cats = q_c_l;
+          results.forEach(re => {
+            var re_cats = re.categories;
+            console.log(re.id);
+            re_cats.forEach(re_cat => {
+              if(flag==1){
+                return false;
+              }
+              i_cats.forEach(i_cat => {
+                if(i_cat == re_cat.id){
+                  res_final.push(re.name);
+                  flag = 1;
+                }
+                if(flag == 1){
+                  return false;
+                }
+              });
+            });
+          });
+        }
+        res.send(res_final);
+      });
+    }
+    else if (q_a == null && q_c_l!=null){
+      console.log("NO YES");
+      restaurant.model.find({}, (error, results) => {
+        if (error) {
+          res.send(error);
+        }
+        var res_final = [];
+        if(typeof q_c_l === 'string'){
+          console.log("1 done");
+          results.forEach(element1 => {
+            var cats = element1.categories;
+            cats.forEach(element2 => {
+              if (element2.id == q_c_l){
+                res_final.push(element1.name);
+              }
+            });
+          });
+        }
+        else{
+          console.log("list dadi dadash");
+          var flag = 0;
+          var i_cats = q_c_l;
+          results.forEach(re => {
+            var re_cats = re.categories;
+            console.log(re.id);
+            re_cats.forEach(re_cat => {
+              if(flag==1){
+                return false;
+              }
+              i_cats.forEach(i_cat => {
+                if(i_cat == re_cat.id){
+                  res_final.push(re.name);
+                  flag = 1;
+                }
+                if(flag == 1){
+                  return false;
+                }
+              });
+            });
+          });
+        }
+        res.send(res_final);
+      });
+      
+    }
+    else if(q_a != null && q_c_l==null){
+      console.log("YES NO");
+      restaurant.model.find({'address.area':req.query.area}, (error, results) => {
+        if (error) {
+          res.send(error);
+        }
+        res.send(results);
+      });
+
+    }
+    else{
+      console.log("NO NO");
+      restaurant.model.find({}, (error, results) => {
+        if (error) {
+          res.send(error);
+        }
+        res.send(results);
+      });  
+    }
+    // restaurant.model.find({'address.area':req.query.area}, (error, results) => {
+    //   if (error) {
+    //     res.send(error);
+    //   }
+    //   res.send(results);
+    // });
   })
 
   //ok!
