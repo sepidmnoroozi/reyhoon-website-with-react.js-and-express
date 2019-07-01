@@ -1,5 +1,7 @@
 const express = require("express");
 const restaurant = require("../models/restaurant");
+const comment = require("../models/comment");
+var arraySort = require('array-sort');
 
 const restaurantRouter = express.Router();
 
@@ -27,7 +29,7 @@ restaurantRouter
       res.send(result);
     });
   })
-  //not ok!
+  //ok!
   .get("/restaurants", (req, res) => {
     var q = req.query;
     var q_a = q.area;
@@ -140,12 +142,7 @@ restaurantRouter
         res.send(results);
       });  
     }
-    // restaurant.model.find({'address.area':req.query.area}, (error, results) => {
-    //   if (error) {
-    //     res.send(error);
-    //   }
-    //   res.send(results);
-    // });
+
   })
 
   //ok!
@@ -176,10 +173,66 @@ restaurantRouter
     
   })
   .get("/restaurants/:id/comments", (req, res) => {
+    var param = req.params;
+    console.log(param["id"]);
+    restaurant.model.find({"id":param["id"]}, (error, results) => {
+      if(error){
+        res.send(error);
+      }
+      // res.send(results);
+      result = results[0];
+      res_comments = result["comments"];
+      val = 0;
+      res_comments.forEach(element => {
+        val = val + (element["packaging"] + element["deliveryTime"])/2;
+      });
+      console.log(res_comments.length);
+      val = val/(res_comments.length);
+      //res_comments.length
+      result["averageRate"] = val;
+      result.save("saved!");
+      arraySort(res_comments, 'created_at', {reverse: true});
+      res.send(res_comments);
 
+    });
+
+    
   })
   .post("/restaurants/:id/comments", (req, res) => {
+    console.log("ommad to comment post");
+    let commentObject = new comment.model();
+    commentObject.id = req.body.id;
+    commentObject.author = req.body.author;
+    commentObject.packaging = req.body.packaging;
+    commentObject.deliveryTime = req.body.deliveryTime;
+    commentObject.text = req.body.text;
+    commentObject.save();
 
+    var param = req.params;
+    console.log(param["id"]);
+    restaurant.model.find({"id":param["id"]}, (error, results) => {
+      if(error){
+        res.send(error);
+      }
+      // res.send(results);
+      result = results[0];
+      res_comments = result["comments"];
+      val = 0;
+      res_comments.forEach(element => {
+        val = val + (element["packaging"] + element["deliveryTime"])/2;
+      });
+      console.log(res_comments.length);
+      val = val/(res_comments.length);
+      //res_comments.length
+      result["averageRate"] = val;
+      res_comments.push(commentObject);
+      result["comments"] = res_comments;
+      result.save();
+      console.log("val is : ");
+      console.log(val);
+      res.send("hale");
+
+    })
   })
   //ok!
   .post("/restaurants", (req, res) => {

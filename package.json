@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sepidmnoroozi/reyhoon-backend#readme",
   "dependencies": {
+    "array-sort": "^1.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.6.2",
     "nodemon": "^1.19.1"
