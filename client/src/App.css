@@ -1,33 +1,138 @@
-.App {
-  text-align: center;
+.topnav {
+  background: linear-gradient(to right, rgb(182, 12, 89), rgb(142, 11, 148));
+  overflow: hidden;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.haha {
+  background-color: white;
+  padding: 1%;
   color: white;
+  /* font-size: 28px; */
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: rgb(100, 100, 100);
+  text-align: center;
+  padding: 1px 70px 20px 7px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: darkred;
+}
+.topnav a {
+  font-size: large;
+  /*font-weight: bold;*/
+}
+.topnav a.big {
+  font-size: x-large;
+  color: rgb(200, 200, 200);
+}
+.topnav a.near {
+  padding: 1px 0px 20px 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#navhome {
+  height: 40px;
+  padding-left: 30px;
+}
+.socialmedia {
+  /*border-top: #dddddd solid 1px;*/
+  background-color: #191919;
+  padding-top: 2%;
+  padding-bottom: 0.6%;
+}
+.socialmedia div {
+  display: inline;
+}
+.icons {
+  padding-top: 2%;
+  margin-left: 14%;
+  font-size: 20px;
+  color: #878787;
+}
+.fab {
+  margin: 1% 1% 1% 1%;
+  color: #878787;
+}
+
+.socialtext {
+  color: #878787;
+  padding-top: 4%;
+  margin-left: 36%;
+  font-size: 15px;
+}
+.bottombar {
+  background-color: #202020;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.bottom-grid {
+  background-color: #202020;
+  display: grid;
+  grid-template-columns: 16.5% 16.5% 16.5% 16.5% 30%;
+  /*grid-template-rows: 150% 150% 150% 150%;*/
+  grid-column-gap: 2%;
+  margin: 0 5% 0 5%;
+  padding: 4% 10% 5% 10%;
+  color: #858585;
+}
+.bottomitem {
+  background-color: #202020;
+  margin: 0 0 0 0;
+  text-align: right;
+}
+
+.bottomitem1 {
+  border-top: 3px solid #ae9040;
+}
+.bottomitem2 {
+  border-top: 3px solid #8c242c;
+}
+.bottomitem3 {
+  border-top: 3px solid #7a2345;
+}
+.bottomitem4 {
+  border-top: 3px solid #581766;
+}
+
+.bottombar a {
+  display: block;
+  margin: 0 0 0 0;
+  color: #858585;
+  text-decoration: none;
+}
+
+.bottomitem5 a {
+  color: cornflowerblue;
+}
+.bottombar h4 {
+  color: white;
+  margin: 10px 0 10px 0;
+}
+
+.bottomitem1 img {
+  border: 2px solid white;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  height: 40%;
+  width: 80%;
+}
+.logobar {
+  margin: 20px 0 0 0;
+  align-content: center;
+  align-items: center;
+  padding-left: 40%;
+  padding-bottom: 5%;
+}
+.logo {
+  display: inline;
+}
+.logo img {
+  height: 120px;
+  width: 110px;
 }
