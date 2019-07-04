@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import bgpic from "/home/mnoroozi/final-project/backend/client/src/img/rest-back-fast-food3.jpg";
+import bgpic from "/home/mnoroozi/final-project/backend/client/src/img/bgpic.jpg";
 import vitrin from "/home/mnoroozi/final-project/backend/client/src/img/op1.jpeg";
-import map from "/home/mnoroozi/final-project/backend/client/src/img/map.jpg";
+// import map from "/home/mnoroozi/final-project/backend/client/src/img/map.jpg";
 import "/home/mnoroozi/final-project/backend/client/src/App.css";
 
 class Restaurant extends Component {
