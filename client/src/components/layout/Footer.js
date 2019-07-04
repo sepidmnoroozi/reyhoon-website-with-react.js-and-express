@@ -13,14 +13,14 @@ class Footer extends Component {
           <div className="bottom-grid">
             <div className="bottomitem bottomitem1">
               <h4>اپلیکیشن های موبایل</h4>
-              <a>
-                <img src={googleplaydark} />
+              <a href="/">
+                <img src={googleplaydark} alt="ah" />
               </a>
-              <a>
-                <img src={sibappdark} />
+              <a href="/">
+                <img src={sibappdark} alt="ah" />
               </a>
-              <a>
-                <img src={cafebazaardark} />
+              <a href="/">
+                <img src={cafebazaardark} alt="ah" />
               </a>
             </div>
             <div className="bottomitem bottomitem2">
@@ -51,10 +51,10 @@ class Footer extends Component {
           </div>
           <div className="logobar">
             <div className="logo">
-              <img src={logo2} />
+              <img src={logo2} alt="ah" />
             </div>
             <div className="logo">
-              <img src={logo1} />
+              <img src={logo1} alt="ah" />
             </div>
           </div>
         </div>

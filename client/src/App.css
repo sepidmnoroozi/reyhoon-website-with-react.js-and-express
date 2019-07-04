@@ -1,44 +1,98 @@
-.topnav {
-  background: linear-gradient(to right, rgb(182, 12, 89), rgb(142, 11, 148));
+@font-face {
+  font-family: myFirstFont;
+  src: url("/home/mnoroozi/final-project/backend/client/src/font/BYekan+.ttf");
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url("/home/mnoroozi/final-project/backend/client/src/font/BYekanBold.ttf");
+  font-weight: bold;
+}
+.App {
+  padding: 0% 0% 0% 0%;
+  margin: 0% 0% 0% 0%;
+}
+
+#navbar {
   overflow: hidden;
+  background-color: #ffffff;
+  border-left-width: 80%;
+  top: 0;
+  z-index: 99;
+  border-bottom: 2px solid #b22222;
 }
 
-.haha {
-  background-color: white;
-  padding: 1%;
-  color: white;
-  /* font-size: 28px; */
-}
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: right;
-  color: rgb(100, 100, 100);
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  color: black;
   text-align: center;
-  padding: 1px 70px 20px 7px;
+  padding: 15px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  color: darkred;
-}
-.topnav a {
-  font-size: large;
-  /*font-weight: bold;*/
-}
-.topnav a.big {
-  font-size: x-large;
-  color: rgb(200, 200, 200);
-}
-.topnav a.near {
-  padding: 1px 0px 20px 5px;
-}
-
-#navhome {
-  height: 40px;
+/* Style the logo */
+#navbar #logo {
   padding-left: 30px;
 }
+
+/* Links on mouse-over */
+#navbar a:hover {
+  color: #b22222;
+  text-decoration: none;
+  font-weight: none;
+}
+
+/* Display some links to the right */
+#navbar-right {
+  float: right;
+  display: inline-block;
+}
+
+#help {
+  font-family: "Shabnam", sans-serif;
+  width: 60px;
+  float: right;
+  display: inline-block;
+}
+#help a:hover {
+  color: #b22222;
+  text-decoration: none;
+  font-weight: none;
+}
+
+#register {
+  font-family: "Shabnam", sans-serif;
+  width: 60px;
+  float: right;
+  display: inline-block;
+  padding-right: 30px;
+}
+
+#register a:hover {
+  color: #b22222;
+  text-decoration: none;
+  font-weight: none;
+}
+
+#login {
+  font-family: "Shabnam", sans-serif;
+  width: 60px;
+  float: right;
+  display: inline-block;
+  border-left: 2px solid #808080;
+  height: 45px;
+}
+
+#login a:hover {
+  color: #b22222;
+  text-decoration: none;
+  font-weight: none;
+}
+
 .socialmedia {
   /*border-top: #dddddd solid 1px;*/
   background-color: #191919;
@@ -135,4 +189,202 @@
 .logo img {
   height: 120px;
   width: 110px;
+}
+
+#bgpic {
+  padding: 0% 0% 0% 0%;
+  margin: 0% 0% 0% 0%;
+  width: 100%;
+  height: 100%;
+}
+.Landing {
+  padding: 0% 0% 0% 0%;
+  margin: 0% 0% 0% 0%;
+}
+
+.restinfo {
+  padding: 0% 0% 0% 0%;
+  margin: 0% 0% 0% 0%;
+  background-color: #581766;
+}
+
+.intro {
+  background-color: #b22222;
+  position: absolute;
+  top: 300px;
+  left: 22%;
+
+  /* padding: 10%; */
+  /* margin: 20%; */
+  text-align: center;
+  /* padding: 2%; */
+  align-content: center;
+}
+.firstpart {
+  padding-top: 10%;
+  padding-right: 27%;
+  padding-left: 27%;
+}
+.star-rate {
+  padding: 0px 0px 0px 0px;
+  display: inline-block;
+  font-size: small;
+}
+.stars-inner {
+  /* width: 50%; */
+}
+.before {
+  display: inline-block;
+  font-size: small;
+  color: #777777;
+}
+.after {
+  display: inline-block;
+  font-weight: bold;
+  color: orange;
+  font-size: small;
+}
+.ratingbox {
+  /* padding: 1% 0px 1% 0px; */
+}
+.tabbar {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  background-color: #7a2345;
+  justify-content: center;
+  align-content: center;
+  place-content: center;
+}
+.innertab {
+  text-align: center;
+  width: 100%;
+  /* font-family: "Shabnam", sans-serif; */
+  background-color: white;
+  border: none;
+  /* border-radius: 15px; */
+  font-size: 14px;
+  color: #808080;
+  padding: 15px;
+}
+.innertab:focus {
+  border-bottom: mediumvioletred solid 2px;
+}
+.tab {
+  text-align: center;
+  align-content: center;
+}
+.secondpart {
+  margin-top: 18%;
+  background-color: aquamarine;
+}
+#restpic {
+  position: absolute;
+  top: -10%;
+  left: 43.5%;
+  border: solid skyblue 3px;
+}
+.searchInput {
+  text-align: right;
+  margin-left: 22%;
+  /* margin-right: 30%; */
+  padding-bottom: 0.1%;
+  padding-top: 0.1%;
+  border: none;
+  text-align: right;
+  background-color: #f8f8fa;
+  width: 54%;
+  height: 3%;
+  border: none;
+  /* border-radius: 5px; */
+  /* margin-bottom: 40px; */
+  padding-top: 12px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-bottom: red solid 2px;
+  text-decoration: none;
+  font-size: 15px;
+}
+.menuSearch {
+  padding-bottom: 0.2%;
+}
+.foods {
+  margin-top: 10%;
+  margin-left: 18%;
+  margin-right: 10%;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 81% 10%;
+  background-color: palevioletred;
+  justify-content: center;
+  align-content: center;
+  place-content: center;
+  text-align: right;
+}
+.catfoods {
+  display: grid;
+  background-color: violet;
+  justify-content: center;
+  align-content: center;
+  place-content: center;
+  text-align: right;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.fooditems {
+  background-color: greenyellow;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 3%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.catlist {
+  text-align: right;
+}
+.innercatlist {
+  background-color: skyblue;
+  /* margin-left: 120%; */
+  text-align: right;
+}
+.food {
+  padding: 3%;
+  background-color: yellow;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(219, 215, 219, 1);
+  -moz-box-shadow: 0px 0px 3px 1px rgba(219, 215, 219, 1);
+  box-shadow: 0px 0px 3px 1px rgba(219, 215, 219, 1);
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+}
+.price {
+  display: inline;
+  font-weight: bold;
+  float: left;
+}
+.foodname {
+  display: inline;
+  font-weight: bold;
+}
+.hinfo {
+  text-align: right;
+  margin-left: 22%;
+  /* margin-right: 30%; */
+  padding-bottom: 0.1%;
+  padding-top: 0.1%;
+  border: none;
+  text-align: right;
+  background-color: #f8f8fa;
+  width: 58%;
+  height: 3%;
+  border: none;
+  /* border-radius: 5px; */
+  /* margin-bottom: 40px; */
+  padding-top: 12px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  border-bottom: red solid 2px;
+  text-decoration: none;
+  font-size: large;
 }
