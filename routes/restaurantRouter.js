@@ -10,6 +10,10 @@ restaurantRouter
     console.log("you've called restaurants api");
     req.restaurant = {};
     res.header("Access-Control-Allow-Origin", "*");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
     next();
   })
   //ok!
@@ -133,7 +137,8 @@ restaurantRouter
             res.send(error);
           }
           console.log(req.body);
-          console.log("baba ah");
+          console.log(typeof results);
+          console.log("divoonam kardi ah");
           res.status(200);
           res.send(results);
         }
@@ -172,6 +177,8 @@ restaurantRouter
       result.save("saved!");
       console.log("val is : ");
       console.log(val);
+      console.log(typeof results);
+      console.log("hale baba");
       res.status(200);
       res.send(result);
     });

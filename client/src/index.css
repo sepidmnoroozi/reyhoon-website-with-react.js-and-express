@@ -1,14 +1,43 @@
+@font-face {
+  font-family: Shabnam;
+  src: url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam.eot");
+  src: url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam.eot?#iefix")
+      format("embedded-opentype"),
+    url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam.woff")
+      format("woff"),
+    url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam.ttf")
+      format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Shabnam;
+  src: url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Bold.eot");
+  src: url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Bold.woff")
+      format("woff"),
+    url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Bold.ttf")
+      format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Shabnam;
+  src: url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Light.eot");
+  src: url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Light.woff")
+      format("woff"),
+    url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Light.ttf")
+      format("truetype");
+  font-weight: 300;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: myFirstFont, sans-serif;
+  font-family: "Shabnam", sans-serif;
   padding: 0% 0% 0% 0%;
   margin: 0% 0% 0% 0%;
-  background-color: orange;
+  /* background-color: pink; */
 }
 
 code {

@@ -19,8 +19,25 @@ class Restaurant extends Component {
   }
   componentDidMount() {
     var ah = localStorage.getItem("selectedRestaurant");
+    this.setState({
+      id: ah
+    });
     console.log(ah);
-    // this.getRest();
+    this.getRest();
+  }
+
+  async getRest() {
+    var name = this.state.id;
+    var result = await fetch("http://localhost:5000/api/restaurants/" + name, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+    // console.log(result);
+    let jsonRes = await result.text();
+    let finalResult = JSON.parse(jsonRes);
+    console.log(finalResult["comments"]);
   }
   render() {
     return (

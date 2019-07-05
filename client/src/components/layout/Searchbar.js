@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Select from "react-select";
+import AsyncSelect from "react-select";
 import homepic from "/home/mnoroozi/final-project/backend/client/src/img/home.png";
 import foodpic from "/home/mnoroozi/final-project/backend/client/src/img/food.png";
 
@@ -73,43 +73,27 @@ class Searchbar extends Component {
             برای دیدن لیست رستوران‌ها و فست‌فود‌هایی که به شما سرویس می‌دهند،
             منطقه خود را وارد کنید
           </p>
-          <div className="dropboxes">
-            <div className="drop1">
-              <div id="input_container1">
-                <a id="searchbarbutt" href="/restaurantslist">
-                  <i className="fas fa-search intro_icon1_1" />
-                </a>
-                <Select
-                  defaultValue={[options[2], options[3]]}
-                  onChange={this.handleSubmit}
-                  name="colors"
-                  onMenuOpen={onMenuOpen}
-                  options={options}
-                  className="basic-multi-select"
-                  classNamePrefix="select"
-                />
-
-                <i className="fas fa-map-marker-alt intro_icon1_2" />
-              </div>
-              <datalist id="regions">
-                <option value="نیاوران" />
-                <option value="یوسف آباد" />
-                <option value="ولیعصر" />
-                <option value="شوش" />
-                <option value="باغ کتاب" />
-                <option value="میرداماد" />
-              </datalist>
+          <div class="dropboxes">
+            <div class="drop1">
+              <a id="searchbarbutt" href="/restaurantslist">
+                <i className="fas fa-search intro_icon1_1" />
+              </a>
+              <AsyncSelect
+                defaultValue={[options[2], options[3]]}
+                onChange={this.handleSubmit}
+                onMenuOpen={onMenuOpen}
+                options={options}
+                id="input1"
+              />
             </div>
             <div className="drop2">
-              <div id="input_container2">
-                <input
-                  id="input2"
-                  list="cities"
-                  name="citydrop"
-                  placeholder="تهران"
-                />
-                <i className="fas fa-angle-down intro_icon2" />
-              </div>
+              <input
+                id="input2"
+                list="cities"
+                name="citydrop"
+                placeholder="تهران"
+              />
+              <i className="fas fa-angle-down intro_icon2" />
               <datalist id="cities">
                 <option value="شیراز" />
                 <option value="مشهد" />
