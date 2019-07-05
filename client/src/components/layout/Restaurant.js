@@ -11,7 +11,7 @@ class Restaurant extends Component {
         <div className="restinfo">
           <img src={bgpic} alt="bgpic" id="bgpic" />
         </div>
-        <div className="intro">
+        <div className="introrest">
           <div className="firstpart">
             <div className="respic">
               <img src={vitrin} alt="vitrin" id="restpic" />

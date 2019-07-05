@@ -6,17 +6,16 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Restaurant from "./components/layout/Restaurant";
 import Restaurantlist from "./components/layout/Restaurantslist";
-
+import Searchbar from "./components/layout/Searchbar";
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="App">
-          {/* <Navbar /> */}
+          <Navbar />
           <Route exact path="/" component={Searchbar} />
           <Route exact path="/restaurant" component={Restaurant} />
           <Route exact path="/restaurantslist" component={Restaurantlist} />
-          {/* <Footer /> */}
         </div>
       </Router>
     );
