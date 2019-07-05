@@ -4,13 +4,19 @@ import vitrin from "/home/mnoroozi/final-project/backend/client/src/img/op1.jpeg
 // import map from "/home/mnoroozi/final-project/backend/client/src/img/map.jpg";
 import "/home/mnoroozi/final-project/backend/client/src/App.css";
 
+var sectionStyle = {
+  width: "100%",
+  height: "250px",
+  backgroundImage: "url(" + bgpic + ")"
+};
 class Restaurant extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     resname: ""
-  //   };
-  // }
+  constructor() {
+    super();
+    this.state = {
+      id: "",
+      name: ""
+    };
+  }
   componentDidMount() {
     var ah = localStorage.getItem("selectedRestaurant");
     console.log(ah);
@@ -19,51 +25,50 @@ class Restaurant extends Component {
   render() {
     return (
       <div className="Landing">
-        <div className="restinfo">
-          <img src={bgpic} alt="bgpic" id="bgpic" />
-        </div>
-        <div className="introrest">
-          <div className="firstpart">
-            <div className="respic">
-              <img src={vitrin} alt="vitrin" id="restpic" />
-            </div>
-            <p>vitrin</p>
-            <div className="ratingbox">
-              <span className="before">(81)</span>
-              <div className="star-rate">
-                <span className="fa fa-star checked" />
-                <span className="fa fa-star checked" />
-                <span className="fa fa-star checked" />
-                <span className="fa fa-star" />
-                <span className="fa fa-star" />
+        <div className="restinfo" style={sectionStyle}>
+          <div className="introrest">
+            <div className="firstpart">
+              <div className="respic">
+                <img src={vitrin} alt="vitrin" id="restpic" />
               </div>
-              <span className="after">3</span>
+              <p>vitrin</p>
+              <div className="ratingbox">
+                <span className="before">(81)</span>
+                <div className="star-rate">
+                  <span className="fa fa-star checked" />
+                  <span className="fa fa-star checked" />
+                  <span className="fa fa-star checked" />
+                  <span className="fa fa-star" />
+                  <span className="fa fa-star" />
+                </div>
+                <span className="after">3</span>
+              </div>
+              <div className="categoris">
+                <span className="category">فست فود</span>
+                <span>&bull;</span>
+                <span className="category">پیتزا</span>
+                <span>&bull;</span>
+                <span className="category">برگر</span>
+                <span>&bull;</span>
+                <span className="category">ساندویچ</span>
+              </div>
+              <address
+                title="بلوار اندرزگو، بین کاوه و قیطریه، نبش مهر محمدی جنوبی"
+                className="XhgA9"
+              >
+                بلوار اندرزگو، بین کاوه و قیطریه، نبش مهر محمدی
+              </address>
             </div>
-            <div className="categoris">
-              <span className="category">فست فود</span>
-              <span>&bull;</span>
-              <span className="category">پیتزا</span>
-              <span>&bull;</span>
-              <span className="category">برگر</span>
-              <span>&bull;</span>
-              <span className="category">ساندویچ</span>
-            </div>
-            <address
-              title="بلوار اندرزگو، بین کاوه و قیطریه، نبش مهر محمدی جنوبی"
-              className="XhgA9"
-            >
-              بلوار اندرزگو، بین کاوه و قیطریه، نبش مهر محمدی
-            </address>
-          </div>
-          <div className="tabbar">
-            <div className="tab">
-              <button className="innertab">منوی رستوران</button>
-            </div>
-            <div className="tab">
-              <button className="innertab">اطلاعات رستوران</button>
-            </div>
-            <div className="tab">
-              <button className="innertab">نظرات کاربران</button>
+            <div className="tabbar">
+              <div className="tab">
+                <button className="innertab">منوی رستوران</button>
+              </div>
+              <div className="tab">
+                <button className="innertab">اطلاعات رستوران</button>
+              </div>
+              <div className="tab">
+                <button className="innertab">نظرات کاربران</button>
+              </div>
             </div>
           </div>
         </div>

@@ -10,10 +10,6 @@ restaurantRouter
     console.log("you've called restaurants api");
     req.restaurant = {};
     res.header("Access-Control-Allow-Origin", "*");
-    res.header(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept"
-    );
     next();
   })
   //ok!
