@@ -1,11 +1,68 @@
 import React, { Component } from "react";
-import AsyncSelect from "react-select/async";
+import Select from "react-select";
 import homepic from "/home/mnoroozi/final-project/backend/client/src/img/home.png";
 import foodpic from "/home/mnoroozi/final-project/backend/client/src/img/food.png";
+
+const areaOptions = [
+  { value: "vanilla", label: "Vanilla", rating: "safe" },
+  { value: "chocolate", label: "Chocolate", rating: "good" },
+  { value: "strawberry", label: "Strawberry", rating: "wild" },
+  { value: "salted-caramel", label: "Salted Caramel", rating: "crazy" }
+];
+
 class Searchbar extends Component {
+  constructor() {
+    super();
+    this.state = {
+      options: []
+    };
+  }
+
+  initilize_options = async () => {
+    var result = await fetch(
+      "http://localhost:5000/api/restaurants/area/select",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+    );
+    // console.log(result);
+    let jsonRes = await result.text();
+    let finalResult = JSON.parse(jsonRes);
+    console.log(finalResult);
+    var temp = [];
+    let i = 0;
+    for (i = 0; i < finalResult.length; i++) {
+      temp.push({
+        value: finalResult[i],
+        label: finalResult[i],
+        rating: "areas"
+      });
+    }
+    this.setState({
+      options: temp
+    });
+  };
+
+  onMenuOpen = () => {
+    console.log("hellooo");
+    setTimeout(() => {
+      this.initilize_options();
+    }, 1000);
+  };
+  handleSubmit = async selected => {
+    console.log(selected);
+    localStorage.setItem("selectedArea", selected.label);
+  };
+
   render() {
+    const { options } = this.state;
+    const { onMenuOpen } = this;
+    // this.initilize_options();
     return (
-      <div class="intro">
+      <div className="intro">
         <div className="innerintro">
           <img src={foodpic} id="foodpic" alt="bgsearch" />
         </div>
@@ -16,26 +73,23 @@ class Searchbar extends Component {
             برای دیدن لیست رستوران‌ها و فست‌فود‌هایی که به شما سرویس می‌دهند،
             منطقه خود را وارد کنید
           </p>
-          <div class="dropboxes">
-            <div class="drop1">
+          <div className="dropboxes">
+            <div className="drop1">
               <div id="input_container1">
                 <a id="searchbarbutt" href="/restaurantslist">
-                  <i class="fas fa-search intro_icon1_1" />
+                  <i className="fas fa-search intro_icon1_1" />
                 </a>
-                {/* <input
-                  id="input1"
-                  list="regions"
-                  name="regiondrop"
-                  placeholder="مثلا نیاوران"
-                /> */}
-                <AsyncSelect
-                  id="input1"
-                  cacheOptions
-                  onInputChange={this.handleInputChange}
-                  placeholder="مثلا نیاوران"
+                <Select
+                  defaultValue={[options[2], options[3]]}
+                  onChange={this.handleSubmit}
+                  name="colors"
+                  onMenuOpen={onMenuOpen}
+                  options={options}
+                  className="basic-multi-select"
+                  classNamePrefix="select"
                 />
 
-                <i class="fas fa-map-marker-alt intro_icon1_2" />
+                <i className="fas fa-map-marker-alt intro_icon1_2" />
               </div>
               <datalist id="regions">
                 <option value="نیاوران" />
@@ -46,7 +100,7 @@ class Searchbar extends Component {
                 <option value="میرداماد" />
               </datalist>
             </div>
-            <div class="drop2">
+            <div className="drop2">
               <div id="input_container2">
                 <input
                   id="input2"
@@ -54,7 +108,7 @@ class Searchbar extends Component {
                   name="citydrop"
                   placeholder="تهران"
                 />
-                <i class="fas fa-angle-down intro_icon2" />
+                <i className="fas fa-angle-down intro_icon2" />
               </div>
               <datalist id="cities">
                 <option value="شیراز" />

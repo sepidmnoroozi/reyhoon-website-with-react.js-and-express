@@ -5,6 +5,17 @@ import vitrin from "/home/mnoroozi/final-project/backend/client/src/img/op1.jpeg
 import "/home/mnoroozi/final-project/backend/client/src/App.css";
 
 class Restaurant extends Component {
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     resname: ""
+  //   };
+  // }
+  componentDidMount() {
+    var ah = localStorage.getItem("selectedRestaurant");
+    console.log(ah);
+    // this.getRest();
+  }
   render() {
     return (
       <div className="Landing">

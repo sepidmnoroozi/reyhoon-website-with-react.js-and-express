@@ -431,6 +431,43 @@
 .allsearch:focus {
   border: solid black 2px;
 }
+.allsecond {
+  background-color: greenyellow;
+  display: grid;
+  grid-template-columns: auto auto;
+  /* grid-gap: 3%; */
+  /* padding-left: 2%;
+  padding-right: 2%; */
+}
+.allrests {
+  background-color: red;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  /* grid-gap: 3%; */
+}
+.allrest {
+}
+.allcatlist {
+  background-color: rgb(142, 11, 148);
+  display: grid;
+}
+.allcat {
+  border-bottom: #581766 solid 2px;
+  /* text-align: right; */
+}
+.orderbutton {
+  background-color: white;
+  border: #581766 solid 2px;
+  text-decoration: none;
+  padding: 3%;
+}
+.orderbutton:hover {
+  border: #581766 solid 10px;
+}
+.changebody {
+  background-color: #581766;
+}
+/* search bar  */
 
 .intro {
   /* background-image: require(
