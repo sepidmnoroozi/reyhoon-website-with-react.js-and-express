@@ -20,7 +20,7 @@ class Searchbar extends Component {
 
   initilize_options = async () => {
     var result = await fetch(
-      "http://localhost:5000/api/restaurants/area/select",
+      "http://localhost:3002/api/restaurants/area/select",
       {
         method: "GET",
         headers: {

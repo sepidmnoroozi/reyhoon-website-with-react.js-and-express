@@ -3,84 +3,52 @@
   margin: 0% 0% 0% 0%;
 }
 
-#navbar {
+.topnav {
+  background: linear-gradient(to right, rgb(182, 12, 89), rgb(142, 11, 148));
   overflow: hidden;
-  background-color: #ffffff;
-  border-left-width: 80%;
-  top: 0;
-  z-index: 99;
-  border-bottom: 2px solid #b22222;
+  /*position:fixed;*/
+  /*left:0px;*/
+  /*top:0px;*/
+  /*right: 0px;*/
+  /*height: 7.5%;*/
+  width: 100%;
+  /*border-bottom: 5px solid;*/
+  /*border-bottom-color: red;*/
+  padding: 0 0 1.5px 0;
+  /*padding-right: 10%;*/
+  /*padding-left: 10%;*/
 }
 
-/* Style the navbar links */
-#navbar a {
-  float: left;
-  color: black;
+.haha {
+  background-color: white;
+  padding: 1%;
+  color: white;
+  font-size: 28px;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: rgb(100, 100, 100);
   text-align: center;
-  padding: 15px;
+  padding: 1px 70px 20px 7px;
   text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
+  font-size: 17px;
 }
 
-/* Style the logo */
-#navbar #logo {
-  padding-left: 30px;
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: darkred;
 }
-
-/* Links on mouse-over */
-#navbar a:hover {
-  color: #b22222;
-  text-decoration: none;
-  font-weight: none;
+.topnav a {
+  font-size: large;
+  /*font-weight: bold;*/
 }
-
-/* Display some links to the right */
-#navbar-right {
-  float: right;
-  display: inline-block;
+.topnav a.big {
+  font-size: x-large;
+  color: rgb(200, 200, 200);
 }
-
-#help {
-  font-family: "Shabnam", sans-serif;
-  width: 60px;
-  float: right;
-  display: inline-block;
-}
-#help a:hover {
-  color: #b22222;
-  text-decoration: none;
-  font-weight: none;
-}
-
-#register {
-  font-family: "Shabnam", sans-serif;
-  width: 60px;
-  float: right;
-  display: inline-block;
-  padding-right: 30px;
-}
-
-#register a:hover {
-  color: #b22222;
-  text-decoration: none;
-  font-weight: none;
-}
-
-#login {
-  font-family: "Shabnam", sans-serif;
-  width: 60px;
-  float: right;
-  display: inline-block;
-  border-left: 2px solid #808080;
-  height: 45px;
-}
-
-#login a:hover {
-  color: #b22222;
-  text-decoration: none;
-  font-weight: none;
+.topnav a.near {
+  padding: 1px 0px 20px 5px;
 }
 
 .socialmedia {
@@ -190,6 +158,7 @@
 .Landing {
   padding: 0% 0% 0% 0%;
   margin: 0% 0% 0% 0%;
+  background-color: #f1eded;
 }
 .restinfo {
 }
@@ -202,30 +171,31 @@
   align-content: center;
   margin-left: 20%;
   margin-right: 20%;
+  padding-bottom: 1%;
 }
 .firstpart {
   /* padding-top: 10%; */
   padding-right: 27%;
   padding-left: 27%;
+  background-color: white;
 }
 .star-rate {
   padding: 0px 0px 0px 0px;
   display: inline-block;
-  font-size: small;
-}
-.stars-inner {
-  /* width: 50%; */
+  font-size: large;
 }
 .before {
   display: inline-block;
-  font-size: small;
+  font-size: large;
   color: #777777;
+  margin: 0.5%;
 }
 .after {
   display: inline-block;
   font-weight: bold;
   color: orange;
-  font-size: small;
+  margin: 1%;
+  /* font-size: small; */
 }
 .ratingbox {
   /* padding: 1% 0px 1% 0px; */
@@ -253,14 +223,21 @@
 }
 .innertab:focus {
   border-bottom: mediumvioletred solid 1px;
+  color: black;
+}
+.innertab:hover {
+  text-decoration: none;
+  decoration: none;
+  color: black;
+  border-bottom: mediumvioletred solid 1px;
 }
 .tab {
   text-align: center;
   align-content: center;
 }
 .secondpart {
-  margin-top: 18%;
-  background-color: aquamarine;
+  margin-top: 12%;
+  /* background-color: aquamarine; */
 }
 #restpic {
   position: relative;
@@ -275,7 +252,7 @@
   padding-top: 0.1%;
   border: none;
   text-align: right;
-  background-color: #f8f8fa;
+  /* background-color: #f8f8fa; */
   width: 54%;
   height: 3%;
   border: none;
@@ -284,7 +261,7 @@
   padding-top: 12px;
   padding-right: 20px;
   padding-bottom: 20px;
-  border-bottom: red solid 2px;
+  border-bottom: rgb(151, 147, 147) solid 2px;
   text-decoration: none;
   font-size: 15px;
 }
@@ -298,7 +275,8 @@
   padding: 0;
   display: grid;
   grid-template-columns: 81% 10%;
-  background-color: palevioletred;
+  grid-gap: 3%;
+  /* background-color: palevioletred; */
   justify-content: center;
   align-content: center;
   place-content: center;
@@ -306,7 +284,7 @@
 }
 .catfoods {
   display: grid;
-  background-color: violet;
+  /* background-color: violet; */
   justify-content: center;
   align-content: center;
   place-content: center;
@@ -315,24 +293,40 @@
   padding-right: 2%;
 }
 .fooditems {
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
   display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 3%;
   padding-left: 2%;
   padding-right: 2%;
 }
+
 .catlist {
-  text-align: right;
-}
-.innercatlist {
-  background-color: skyblue;
+  /* background-color: skyblue; */
   /* margin-left: 120%; */
   text-align: right;
+  border-right: 1px solid gray;
+}
+.restpagecatitem {
+  padding: 5%;
+  margin: 5%;
+  /* background-color: #878787; */
+  display: block;
+  color: #191919;
+}
+.restpagecatitem:hover {
+  border-bottom: solid 2px rgb(182, 12, 89);
+  text-decoration: none;
+  direction: none;
+  color: #191919;
+}
+.restpagecatitem:visited {
+  text-decoration: none;
+  decoration: none;
 }
 .food {
   padding: 3%;
-  background-color: yellow;
+  background-color: white;
   -webkit-box-shadow: 0px 0px 3px 1px rgba(219, 215, 219, 1);
   -moz-box-shadow: 0px 0px 3px 1px rgba(219, 215, 219, 1);
   box-shadow: 0px 0px 3px 1px rgba(219, 215, 219, 1);
@@ -350,6 +344,7 @@
   font-weight: bold;
 }
 .hinfo {
+  margin-top: 3%;
   margin-left: 22%;
   /* margin-right: 30%; */
   padding-bottom: 0.1%;
@@ -438,13 +433,16 @@
   border: solid black 2px;
 }
 .allsecond {
-  /* background-color: greenyellow; */
+  /* background-color: rgb(236, 231, 231); */
   display: grid;
-  grid-template-columns: 80% 11%;
+  grid-template-columns: 80% 20%;
   grid-gap: 5%;
   padding-left: 3%;
   padding-right: 3%;
   margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 .restsopen {
   /* background-color: red; */
@@ -464,16 +462,30 @@
   grid-gap: 3%;
 }
 .allcatlist {
-  /* background-color: rgb(142, 11, 148); */
-  display: grid;
+  background-color: white;
+  border: #d2cdd3 solid 1px;
+  /* display: grid; */
   text-align: right;
 }
 .allcat {
-  border-bottom: #581766 solid 2px;
+  border-bottom: #d2cdd3 solid 2px;
+  padding: 3%;
   /* text-align: right; */
 }
+.allcatsearchbar {
+  margin: 0;
+  width: 100%;
+  text-align: right;
+}
 #checkbox {
-  margin: 2%;
+  margin: 1%;
+  /* padding: 10%; */
+}
+
+.allcatlisttitle {
+  padding-top: 3%;
+  padding-right: 5%;
+  /* text-align: center; */
 }
 .orderbutton {
   background-color: white;
@@ -620,27 +632,6 @@ address {
   border-radius: 5px;
 }
 
-/* .dropboxes {
-  background-color: #581766;
-}
-.input_container1 {
-  display: inline;
-  width: 50px;
-}
-#searchbarbutt {
-  display: inline;
-}
-.intro_icon1_1 {
-  display: inline;
-}
-#input1 {
-  display: inline;
-  line-height: 40px;
-  width: 50px;
-}
-.intro_icon1_2 {
-  display: inline;
-} */
 .dropboxes {
   width: 70%;
   height: 54px;
@@ -662,4 +653,79 @@ address {
   display: inline;
   height: 55px;
   background-color: #7a2345;
+}
+.restinformation {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 3%;
+}
+.commentrate {
+  display: inline;
+  /* font-weight: bold; */
+  float: left;
+  font-size: small;
+  width: 15%;
+}
+.username {
+  display: inline;
+  font-weight: bold;
+  color: black;
+}
+.comment {
+  padding: 2%;
+  color: #808080;
+  text-align: right;
+  /* background-color: pink; */
+  border-bottom: solid 1px black;
+  /* margin-bottom: 2%; */
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.commdes {
+  text-align: right;
+  margin-right: 20%;
+  color: #777777;
+  font-size: small;
+}
+.resRating {
+  font-size: xx-large;
+  text-align: center;
+}
+.number {
+  font-size: xx-large;
+  text-align: center;
+  color: gold;
+}
+.info {
+  text-align: right;
+  margin-left: 20%;
+  margin-right: 20%;
+  /* background-color: #878787; */
+  padding-right: 4%;
+  padding-bottom: 15%;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+.mapimg {
+  float: left;
+  /* margin-left: 5%; */
+}
+.fa-map-marker-alt {
+  float: right;
+  margin-left: 1%;
+}
+.fa-clock {
+  float: right;
+  margin-left: 1%;
+}
+.time {
+  margin-right: 40%;
+}
+.timediv {
+  margin-left: 60%;
+  border-bottom: #878787 solid 1px;
+  color: #878787;
+}
+.add {
+  color: #878787;
 }

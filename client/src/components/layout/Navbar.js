@@ -39,17 +39,15 @@ class Navbar extends Component {
       //     </div>
       //   </div>
       // </nav>
-      <div id="navbar">
-        <div id="navbar-right">
-          <div id="login">
-            <a href="login.html">ورود</a>
-          </div>
-          <div id="register">
-            <a href="register.html">عضویت</a>
-          </div>
-          <div id="help">
-            <a href="#">راهنما</a>
-          </div>
+      <div class="topnav">
+        <div class="haha">
+          salam
+          <a href="#login">ورود</a>
+          <a class="near big">|</a>
+          <a class="near" href="#signup">
+            عضویت
+          </a>
+          <a href="/">راهنما</a>
         </div>
       </div>
     );

@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const port = 5000;
+const port = 3002;
 const restaurant = require("./models/restaurant.js");
 const address = require("./models/address.js");
 const category = require("./models/category.js");
@@ -71,7 +71,7 @@ db.once("open", function() {
   //   name: "برگر تنوی",
   //   price: 38000,
   //   description: "برگر با قارچ و پنیر",
-  //   foodSet: "burger"
+  //   foodSet: "fastfood"
   // });
   // new_food1.save();
 
@@ -80,7 +80,7 @@ db.once("open", function() {
   //   name: "دبل برگر",
   //   price: 35000,
   //   description: "دو تا برگر  عادی ",
-  //   foodSet: "burger"
+  //   foodSet: "fastfood"
   // });
   // new_food2.save();
 
@@ -89,7 +89,7 @@ db.once("open", function() {
   //   name: "پیتزا مخلوط",
   //   price: 30000,
   //   description: "یه پیتزای عادی",
-  //   foodSet: "pizza"
+  //   foodSet: "salad"
   // });
   // new_food3.save();
 
@@ -98,7 +98,7 @@ db.once("open", function() {
   //   name: "پیتزای پپرونی",
   //   price: 28000,
   //   description: "پیتزا با یه عالمه پپرونی",
-  //   foodSet: "pizza"
+  //   foodSet: "salad"
   // });
   // new_food4.save();
 
@@ -140,7 +140,7 @@ db.once("open", function() {
   //   closingTime: 23,
   //   averageRate: 3,
   //   address: new_address6,
-  //   categories: [new_category2, new_category3],
+  //   categories: [new_category2, new_category3, new_category4],
   //   foods: [new_food1, new_food2, new_food3, new_food4],
   //   comments: [new_comment1, new_comment2, new_comment3]
   // });
@@ -188,7 +188,7 @@ db.once("open", function() {
   // });
   // new_restaurant4.save();
 
-  // category.model.remove({}, function(err) {
+  // restaurant.model.remove({}, function(err) {
   //   if (!err) {
   //     console.log("remoded");
   //   } else {

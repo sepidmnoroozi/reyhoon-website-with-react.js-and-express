@@ -1,36 +1,27 @@
 @font-face {
   font-family: Shabnam;
-  src: url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam.eot");
-  src: url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam.eot?#iefix")
-      format("embedded-opentype"),
-    url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam.woff")
-      format("woff"),
-    url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam.ttf")
-      format("truetype");
+  src: url("/font/Shabnam.eot");
+  src: url("/font/Shabnam.eot?#iefix") format("embedded-opentype"),
+    url("/font/Shabnam.woff") format("woff"),
+    url("/font/Shabnam.ttf") format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: Shabnam;
-  src: url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Bold.eot");
-  src: url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Bold.eot?#iefix")
-      format("embedded-opentype"),
-    url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Bold.woff")
-      format("woff"),
-    url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Bold.ttf")
-      format("truetype");
+  src: url("/font/Shabnam-Bold.eot");
+  src: url("/font/Shabnam-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/font/Shabnam-Bold.woff") format("woff"),
+    url("/font/Shabnam-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: Shabnam;
-  src: url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Light.eot");
-  src: url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Light.eot?#iefix")
-      format("embedded-opentype"),
-    url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Light.woff")
-      format("woff"),
-    url("/home/mnoroozi/final-project/backend/client/src/font/Shabnam-Light.ttf")
-      format("truetype");
+  src: url("/font/Shabnam-Light.eot");
+  src: url("/font/Shabnam-Light.eot?#iefix") format("embedded-opentype"),
+    url("/font/Shabnam-Light.woff") format("woff"),
+    url("/font/Shabnam-Light.ttf") format("truetype");
   font-weight: 300;
 }
 body {
